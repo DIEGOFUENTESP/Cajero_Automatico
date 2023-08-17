@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="shortcut icon" href="./Logo-de-Banco.ico" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+  <title>BANCO NACIONAL</title>
+</head>
+<body>
+  <div class="container">
+    <img src="./Logo de Banco.jpg" alt="Banco Nacional Logo" width="200px" height="100px">
+    
+    <div id="inicioSesion">
+      <h1>Iniciar sesión</h1>
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario" required>
+      
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" name="contrasena" placeholder="Ingrese su contraseña" required><br><br>
+      
+      <button class="submit-btn" type="button" onclick="iniciarSesion()">Iniciar sesión</button><br><br>
+      <button class="azul" onclick="mostrarFormularioCrearUsuario()">Crear usuario</button>
+    </div>
+    
+    <div id="crearUsuario" style="display: none;">
+      <h1>Crear nuevo usuario</h1>
+      <label for="nombreUsuario">Nombre:</label>
+      <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Ingrese su nombre" required>
+
+      <label for="nuevoUsuario">Usuario:</label>
+      <input type="text" id="nuevoUsuario" name="nuevoUsuario" placeholder="Ingrese el nuevo usuario" required>
+    
+      <label for="nuevaContrasena">Contraseña:</label>
+      <input type="password" id="nuevaContrasena" name="nuevaContrasena" placeholder="Ingrese la nueva contraseña" required>
+    
+      <button class="submit-btn" type="button" onclick="crearUsuario()">Crear usuario</button><br><br>
+      <button class="rojo" type="button" onclick="volverInicioSesion()">Volver al Inicio de Sesión</button>
+    </div>
+
+    <div id="cajero" style="display: none;">
+      <h1>Cajero Electrónico</h1>
+      <p>Hola, <span id="nombreUsuarioActual"></span>. Tu saldo actual es: <span class="negrita" id="saldo">0 COP</span></p> 
+      
+      <p>Usuario: <span class="negrita" id="usuarioActual"></span></p>
+    
+      <label>Ingresa la cantidad:</label>
+      <input type="number" id="cantidad" min="0" placeholder="Monto"><br>
+      <button class="blue" onclick="consignar()" id="consignarBtn" disabled>Consignar</button>
+      <button onclick="retirar()" id="retirarBtn" disabled>Retirar</button>
+      
+      <br>
+      <label>Transferir a:</label>
+      <input type="number" id="transferenciaCantidad" min="0" placeholder="Monto">
+      <input type="text" id="transferenciaUsuario" placeholder="Usuario destino"><br>
+      <button class="blue" onclick="transferirUsuario()" id="transferirBtn" disabled>Transferir</button>
+    
+      <div class="seccion-usuario"  id="seccionUsuario">
+        <h2>Movimientos:</h2>
+        <ul id="movimientos"></ul>
+      </div>
+    
+      <button class="red" onclick="cerrarSesion()">Cerrar sesión</button>
+    </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  padding: 0;
+  background: linear-gradient(#141e30, #243b55);
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #D3D3D3;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: yellowgreen;
+  text-shadow: black 0.1em 0.1em 0.2em
+}
+img{
+  padding-left: 200px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  width: 95%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: orange;
+}
+.azul{
+  background-color: #3498db;
+  width: 100%;
+}
+.blue{
+  background-color: #3498db;
+}
+.rojo{
+  background-color:red ;
+  width: 100%;
+}
+.red{
+  background-color:red ;
+}
+.negrita{
+  font-weight: bold;
+}
+.submit-btn {
+  width: 100%;
+}
+.movimiento {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}  
+.movimiento-content {        
+  line-height: 1.5;
+}
+.movimiento-descripcion {
+  font-weight: bold;
+}
+.movimiento-tipo {
+  color: #007bff;
+}
+.movimiento-valor {
+  color: #28a745;
+}
+.movimiento-hora {
+  color: #6c757d;
+}  
+  
